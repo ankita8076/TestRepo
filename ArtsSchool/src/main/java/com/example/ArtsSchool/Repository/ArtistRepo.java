@@ -8,4 +8,5 @@ import com.example.ArtsSchool.Entity.Artist;
 @Repository
 public interface ArtistRepo extends JpaRepository<Artist, Integer>{
 
+	
 }

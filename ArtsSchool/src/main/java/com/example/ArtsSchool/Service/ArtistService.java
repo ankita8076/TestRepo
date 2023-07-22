@@ -1,6 +1,7 @@
 package com.example.ArtsSchool.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,20 @@ public class ArtistService {
 	public List<Artist> getArtistData() {
 		// TODO Auto-generated method stub
 		return artistRepo.findAll();
+	}
+
+	public Artist getArtistDataById(int id) {
+		
+		return artistRepo.findById(id).orElse(null);
+	}
+
+	public Artist updateArtistData(int id, Artist artist) {
+	
+		
+		artistRepo.save(artist);
+		return artist;
+		
+		
 	}
 	
 	
